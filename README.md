@@ -46,12 +46,12 @@ npm run install:all
 npm run dev
 ```
 
- **That's it!** Your app is now running at:
+ **That's it!**  app is now running at:
 - **Frontend**: http://localhost:3000
 - **Backend**: http://localhost:3001
 - **WebSocket**: ws://localhost:3001
 
-Open your browser and go to http://localhost:3000 to start chatting!
+Open  browser and go to http://localhost:3000 to start chatting!
 
 ##  How to Use
 
