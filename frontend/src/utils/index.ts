@@ -1,21 +1,8 @@
-/**
- * Main utilities index file
- * Export all utility functions for easy importing
- */
-
-// Date utilities
 export * from './dateUtils';
-
-// String utilities
 export * from './stringUtils';
-
-// Validation utilities
 export * from './validationUtils';
-
-// Connection utilities
 export * from './connectionUtils';
 
-// Re-export commonly used functions for convenience
 export {
   formatMessageTime,
   formatMessageDate,

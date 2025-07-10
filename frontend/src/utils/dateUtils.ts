@@ -1,12 +1,4 @@
-/**
- * Date utility functions for the message app
- */
 
-/**
- * Format a date for display in chat messages
- * @param date - Date to format
- * @returns Formatted time string (e.g., "14:30")
- */
 export const formatMessageTime = (date: Date): string => {
   return date.toLocaleTimeString([], { 
     hour: '2-digit', 
@@ -14,11 +6,7 @@ export const formatMessageTime = (date: Date): string => {
   });
 };
 
-/**
- * Format a date for display in message list
- * @param date - Date to format
- * @returns Formatted date string (e.g., "Today 14:30" or "Dec 15, 14:30")
- */
+
 export const formatMessageDate = (date: Date): string => {
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -34,11 +22,6 @@ export const formatMessageDate = (date: Date): string => {
   }
 };
 
-/**
- * Check if a date is today
- * @param date - Date to check
- * @returns True if the date is today
- */
 export const isToday = (date: Date): boolean => {
   const today = new Date();
   return date.getDate() === today.getDate() &&
@@ -46,11 +29,7 @@ export const isToday = (date: Date): boolean => {
          date.getFullYear() === today.getFullYear();
 };
 
-/**
- * Get relative time string (e.g., "2 minutes ago", "1 hour ago")
- * @param date - Date to get relative time for
- * @returns Relative time string
- */
+
 export const getRelativeTime = (date: Date): string => {
   const now = new Date();
   const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);

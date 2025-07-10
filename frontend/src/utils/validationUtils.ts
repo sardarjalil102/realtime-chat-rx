@@ -1,13 +1,4 @@
-/**
- * Validation utility functions for the message app
- */
 
-/**
- * Validate message text
- * @param text - Text to validate
- * @param maxLength - Maximum allowed length (default: 1000)
- * @returns Validation result object
- */
 export const validateMessageText = (text: string, maxLength: number = 1000) => {
   if (!text || text.trim().length === 0) {
     return {
@@ -29,13 +20,7 @@ export const validateMessageText = (text: string, maxLength: number = 1000) => {
   };
 };
 
-/**
- * Validate username
- * @param username - Username to validate
- * @param minLength - Minimum length (default: 2)
- * @param maxLength - Maximum length (default: 20)
- * @returns Validation result object
- */
+
 export const validateUsername = (username: string, minLength: number = 2, maxLength: number = 20) => {
   if (!username || username.trim().length === 0) {
     return {
@@ -73,11 +58,7 @@ export const validateUsername = (username: string, minLength: number = 2, maxLen
   };
 };
 
-/**
- * Validate email address
- * @param email - Email to validate
- * @returns Validation result object
- */
+
 export const validateEmail = (email: string) => {
   if (!email || email.trim().length === 0) {
     return {
@@ -100,11 +81,7 @@ export const validateEmail = (email: string) => {
   };
 };
 
-/**
- * Validate WebSocket URL
- * @param url - URL to validate
- * @returns Validation result object
- */
+
 export const validateWebSocketUrl = (url: string) => {
   if (!url || url.trim().length === 0) {
     return {
@@ -134,11 +111,7 @@ export const validateWebSocketUrl = (url: string) => {
   };
 };
 
-/**
- * Validate message object structure
- * @param message - Message object to validate
- * @returns Validation result object
- */
+
 export const validateMessageObject = (message: any) => {
   if (!message || typeof message !== 'object') {
     return {
@@ -177,12 +150,7 @@ export const validateMessageObject = (message: any) => {
   };
 };
 
-/**
- * Sanitize and validate user input
- * @param input - User input to sanitize and validate
- * @param type - Type of input ('message', 'username', 'email')
- * @returns Sanitized and validated input
- */
+
 export const sanitizeAndValidateInput = (input: string, type: 'message' | 'username' | 'email') => {
   const sanitized = input.trim();
   

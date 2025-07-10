@@ -10,7 +10,6 @@ interface MessageItemProps {
 const MessageItem: React.FC<MessageItemProps> = ({ message, isCurrentUser }) => {
   return (
     <div className={`flex items-end gap-2 ${isCurrentUser ? 'justify-end' : 'justify-start'} animate-fadeIn`}>
-      {/* show avatar for other users */}
       {!isCurrentUser && (
         <div className="w-8 h-8 rounded-full bg-indigo-200 flex items-center justify-center font-bold text-indigo-700 text-base border-2 border-white shadow">
           {getInitials(message.sender)}

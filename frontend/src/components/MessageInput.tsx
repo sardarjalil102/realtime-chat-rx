@@ -16,7 +16,6 @@ const MessageInput: React.FC<MessageInputProps> = ({ currentUser }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate and sanitize input
     const sanitizedMessage = sanitizeText(message);
     const validation = validateMessageText(sanitizedMessage);
     
